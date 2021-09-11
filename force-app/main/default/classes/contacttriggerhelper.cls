@@ -1,6 +1,7 @@
 public class contacttriggerhelper {
     
     public static boolean isrec=true;
+    //adding comment
     public static void leadsourceupdate(list<contact> newlst){
         list<contact> conlist = new list<contact>();
         for(contact cc:[select id,lastname,leadsource from contact where id IN:newlst]){
