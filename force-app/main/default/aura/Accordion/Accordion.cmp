@@ -1,0 +1,41 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+    <lightning:avatar fallbackIconName="standard:account" alternativeText="Error"	 />
+    <lightning:accordion activesectionname="Basic Info" >
+        <lightning:accordionsection name="Student info" label="Student info">
+            <lightning:input label="First Name" type="string" aura:id="fname" required="true" />
+            <lightning:input label="Last Name" type="string" aura:id="lname" required="true" />
+            <lightning:input label="DOB"  aura:id="dob" required="true" />
+        </lightning:accordionsection>
+        
+        <lightning:accordionsection name="Studen Education info" label="Student Education info">
+            <lightning:input label="College"  aura:id="col"/>
+            <lightning:input label="Course"  aura:id="cou"/>
+            <lightning:input label="Completed Year"  aura:id="year"/>
+        </lightning:accordionsection>
+        
+        <lightning:accordionsection name="Studen communication info" label= "Student communication info">
+            <lightning:input label="Mobile" required="true" aura:id="mob" />
+            <lightning:input label="Phone"  aura:id="ph"/>
+            <lightning:input label="Email"  aura:id="email"/>
+        </lightning:accordionsection>
+    </lightning:accordion>
+    <br/><br/><br/>
+       
+    <lightning:buttonIcon   alternativeText="set options" iconName="utility:settings" />
+    <lightning:buttonIcon   alternativeText="set options" iconName="utility:adduser" />
+    <lightning:buttonIcon   alternativeText="set options" iconName="utility:delete" />
+    <lightning:buttonIcon   alternativeText="set options" iconName="utility:save" />
+    <lightning:buttonIcon   alternativeText="set options" iconName="utility:bookmark" />
+    <lightning:buttonIcon   alternativeText="set options" iconName="utility:zoomin" />
+    <lightning:buttonIcon   alternativeText="set options" iconName="utility:zoomout" />
+    <br/><br/><br/>
+    <lightning:buttonIconStateful iconName="utility:like"/>
+    <br/><br/><br/>
+    <lightning:buttonmenu iconName="utility:settings" >
+        <lightning:menuitem value="sum of 2 numbers" label="sum"/>
+        <lightning:menuitem value="subtraction of 2 numbers" label="sub"/>
+        <lightning:menuitem value="multiplication of 2 numbers" label="mul"/>
+        <lightning:menuitem value="division of 2 numbers" label="div"/>
+    </lightning:buttonmenu>
+    
+ </aura:component>

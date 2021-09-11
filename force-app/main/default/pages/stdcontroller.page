@@ -1,0 +1,39 @@
+<apex:page sidebar="false" standardController="project__c"  >
+  <apex:form >
+   <apex:sectionHeader title="New project"/>
+   <apex:pageBlock title="project Edit" mode="Edit" >
+    <apex:pageBlockSection title="information"  >
+     <apex:inputField value="{!project__c.Name}"  /  >
+     <apex:inputField value="{!project__c.project_contact_Email_id__c}"  />
+     <apex:inputField value="{!project__c.Active_Status__c}"/>
+     <apex:inputField value="{!project__c.work_loaction__c}" />
+     <apex:inputField value="{!project__c.State__c}"/>
+     <apex:inputField value="{!project__c.Approved_status_by_manager__c}"/>
+     <apex:inputField value="{!project__c.Domain__c}"/>
+     <apex:inputField value="{!project__c.Project_Mangaer__c}"/>
+     <apex:inputField value="{!project__c.project_phone__c}"/>
+    </apex:pageBlockSection>
+    <apex:pageBlockSection title="Project duration" >
+     <apex:inputField value="{!project__c.Start_Date__c}"  /  >
+     <apex:inputField value="{!project__c.Deadline__c}" />
+     <apex:inputField value="{!project__c.Client_Appointment__c}" />
+    </apex:pageBlockSection>
+    <apex:pageBlockSection title="Bill Details" >
+     <apex:inputField value="{!project__c.Paid_Budget__c}"  /  >
+     <apex:inputField value="{!project__c.Quotation_Vaue__c}" />
+    </apex:pageBlockSection>
+    <apex:pageBlockSection title="Client details" >
+     <apex:inputField value="{!project__c.Status__c}"  /  >
+     <apex:inputField value="{!project__c.Expected_Duration__c}" />
+     <apex:inputField value="{!project__c.client__c}" />
+    </apex:pageBlockSection>
+    <apex:pageBlockButtons location="top" >
+     <apex:commandButton value="save" action="{!save}" />
+          <apex:commandButton value="Save & New" action="{!Quicksave}" immediate="true"/>
+          <apex:commandButton value="cancel" action="{!cancel}"/>
+     
+       </apex:pageBlockButtons>
+    </apex:pageBlock>
+    
+  </apex:form>
+</apex:page>

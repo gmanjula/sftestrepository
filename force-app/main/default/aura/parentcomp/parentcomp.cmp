@@ -1,0 +1,9 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<div>
+        Family members are:<br/>
+        Manikanta<br/>
+        Manjula<br/>
+        Sujesh<br/>
+        Rajeswari<br/>
+    </div>
+</aura:component>

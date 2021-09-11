@@ -1,0 +1,15 @@
+<apex:page controller="pollercntrl">
+<apex:form >
+ <apex:outputLabel id="na"     ><b> My name is......{!name}</b></apex:outputLabel>
+ <apex:actionSupport event="onclick" action="{!fname}" reRender="na"/>
+ <apex:actionSupport event="onmouseout" action="{!lname}" reRender="na"/>
+ 
+ <!---<apex:actionFunction name="click" action="{!lname}" rendered="na"/>
+   onmouseout="click()"  onclick="click1()" 
+  <apex:actionFunction name="click1" action="{!fname}" rendered="na"/>
+ 
+
+ <!----<apex:actionPoller interval="5"   action="{!fname}"  reRender="na"/>
+ <apex:actionPoller interval="10" action="{!lname}"  reRender="na"/>---->
+ </apex:form>
+</apex:page>

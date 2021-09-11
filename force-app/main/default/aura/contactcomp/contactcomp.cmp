@@ -1,0 +1,14 @@
+<aura:component >
+	<aura:RegisterEvent name="listofcontact" type="c.contactevent"/>
+    <div class="style">
+        <lightning:input label="Contact Name" type="string" aura:Id="name"/>
+        <lightning:input label="Contact Phone" type="Integer" aura:Id="phone"/>
+        <lightning:buttongroup>
+            <lightning:button label="submit" variant="Brand-outline" onclick="{!c.submit}"/>
+            <lightning:button label="cancel" variant="inverse" onclick="{!c.call}"/>
+         </lightning:buttongroup>
+    
+    
+    </div>
+    <br/>
+</aura:component>

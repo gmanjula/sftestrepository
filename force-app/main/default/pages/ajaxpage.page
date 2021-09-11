@@ -1,0 +1,10 @@
+<apex:page controller="pollercntrl">
+<apex:form >
+ <apex:outputLabel id="na" onmousemove="click()"      ><b> My name is......{!name}</b></apex:outputLabel>
+ <apex:actionFunction name="click" action="{!lname}" rendered="na"/>
+ 
+<!----
+ <apex:actionPoller interval="5"   action="{!fname}"  reRender="na"/>
+ <apex:actionPoller interval="10" action="{!lname}"  reRender="na"/>---->
+ </apex:form>
+</apex:page>

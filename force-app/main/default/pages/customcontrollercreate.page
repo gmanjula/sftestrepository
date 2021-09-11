@@ -1,0 +1,8 @@
+<apex:page controller="actrecsave">
+  <apex:form >
+   <apex:pageBlock title="Account Edit" mode="edit">
+    <apex:pageBlockSection title="Information" >
+    </apex:pageBlockSection>
+   </apex:pageBlock>
+  </apex:form>
+</apex:page>

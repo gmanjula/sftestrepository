@@ -1,0 +1,12 @@
+<apex:page standardController="project__c">
+<apex:form >
+<apex:pageBlock title="Project Edit " mode="edit">
+<apex:pageBlockSection title="Information" collapsible="true">
+<apex:inputField value="{!project__c.name}"/>
+<apex:inputField value="{!project__c.Status__c}"/>
+
+</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:form>
+  
+</apex:page>

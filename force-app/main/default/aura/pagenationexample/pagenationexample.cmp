@@ -1,0 +1,46 @@
+<aura:component  controller="contactlst" implements="force:appHostable" >
+    <aura:attribute name="con" type="Contact" default="{'sobjectType': 'Contact'}" />
+    <aura:attribute name="columns" type="List"/>
+    <aura:attribute name="contactlist" type="Contact[]" />
+    <aura:attribute name="PaginationList" type="Contact[]" />
+    <aura:attribute name="pagesize" type="integer" default="3" />
+    <aura:attribute name="startpage" type="integer" />
+    <aura:attribute name="lastpage" type="integer" />
+    <aura:attribute name="totalRecords" type="integer" />
+    <aura:handler name="init" value="{!this}" action="{!c.invoke}" />
+    <div class="slds-box slds-theme_default">
+      <div class="slds-grid slds-grid_vertical">
+            
+            <div class="slds-col">
+                Name<force:inputField value="{!v.con.LastName}"/>
+            </div>
+            
+            <div class="slds-col">
+                <lightning:button label="Search" onclick="{!c.searchcontact}"/>
+            </div>
+          </div>
+        </div>
+            
+            
+            <aura:if isTrue="true">
+                <div class="slds-grid slds-grid_vertical">
+                    <lightning:datatable data="{!v.PaginationList}"
+                                         columns="{!v.columns}" 
+                                         keyField="id"
+                                         hideCheckboxColumn="false"/>
+                    <lightning:buttonGroup>
+                        <lightning:button label="Previous" 
+                                          disabled="{!v.startPage == 0}"  
+                                          onclick="{!c.previous}" 
+                                          variant="brand"
+                                          iconName='utility:back'/>
+                        <lightning:button label="Next" 
+                                          disabled="{!v.endPage + 1 >= v.totalRecords}" 
+                                          onclick="{!c.next}" 
+                                          variant="brand"
+                                          iconName='utility:forward'/>
+                    </lightning:buttonGroup>
+                </div>
+            </aura:if>
+            
+</aura:component>

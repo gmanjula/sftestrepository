@@ -1,0 +1,16 @@
+<apex:page standardController="project__c" recordSetVar="prjlst" extensions="pagenationextn">
+<apex:form >
+  <apex:pageBlock id="re">
+    <apex:pageBlockTable value="{!prjlst}" var="p">
+      <apex:column value="{!p.name}"/>
+      <apex:column value="{!p.Status__c}"/>
+      <apex:column value="{!p.Active_Status__c}"/>
+      <apex:column value="{!p.client__c}"/>
+   </apex:pageBlockTable>
+  <apex:pageBlockButtons >
+  <apex:commandButton value="Next" action="{!next}" reRender="re" />
+  <apex:commandButton value="Previous" action="{!previous}" reRender="re"/>
+  </apex:pageBlockButtons>
+  </apex:pageBlock>
+  </apex:form>
+</apex:page>

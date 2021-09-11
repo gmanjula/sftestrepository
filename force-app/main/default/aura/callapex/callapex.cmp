@@ -1,0 +1,15 @@
+<aura:component controller="auraexample" implements="force:appHostable,flexipage:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="Name" type="string"/>
+    <div class="block1">
+        <lightning:input label="Last Name" type="string" aura:id="lname" placeholder="Lastname"/>
+        <lightning:input label="First Name" type="string" aura:id="fname"/> 
+        <br/>
+        <lightning:buttongroup>
+            <lightning:button label="submit"  variant="brand"  title="Get Name" onclick="{!c.show}" />
+            <lightning:buttonIcon iconName="utility:call" alternativeText="set call"/>
+        </lightning:buttongroup><br/>
+        <br/>
+        Your name:{!v.Name}
+    </div>
+	
+</aura:component>

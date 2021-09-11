@@ -1,0 +1,9 @@
+<apex:page controller="parentwrapper">
+  <apex:pageBlock >
+   <apex:pageBlockTable value="{!lstchild}" var="p">
+    <apex:column value="{!p.itemname}" headerValue="Item Name"/>
+    <apex:column value="{!p.price}" headerValue="Price "/>
+    <apex:column value="{!p.quantity}" headerValue=" Quanity"/>
+   </apex:pageBlockTable>
+  </apex:pageBlock>
+</apex:page>

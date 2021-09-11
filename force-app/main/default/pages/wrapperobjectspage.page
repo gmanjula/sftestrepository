@@ -1,0 +1,17 @@
+<apex:page controller="objwrapper" >
+ <apex:form >
+  <apex:pageBlock >
+   <apex:pageBlockTable value="{!lstobj}" var="a">
+    <apex:column >
+       <apex:inputCheckbox value="{!a.check}"/>
+    </apex:column>
+    <apex:column value="{!a.act.name}" headerValue="Account name"/>
+    <apex:column value="{!a.act.phone}" headerValue="Account phone"/>
+    <apex:column value="{!a.prj.name}" headerValue="Project Name"/>
+    <apex:column value="{!a.prj.client__c}" headerValue="Project Client"/>
+    <apex:column value="{!a.emp.lastname}" headerValue="Contact Name"/>
+    <apex:column value="{!a.emp.phone}" headerValue="Contact Phone"/>
+   </apex:pageBlockTable>
+  </apex:pageBlock>
+ </apex:form> 
+</apex:page>

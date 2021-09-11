@@ -1,0 +1,3 @@
+<apex:page >
+  <apex:pageMessage title="Error"    severity="confirm">hiiii</apex:pageMessage>
+</apex:page>

@@ -1,0 +1,25 @@
+<apex:page controller="regioncntrl">
+ <apex:form >
+  <apex:pageBlock id="pb">
+   <apex:pageBlockSection title="if you select the customer priority then phone will ne shown" columns="1">
+     <apex:pageBlockSectionItem >
+     <apex:outputLabel value="{!$objecttype.Account.fields.CustomerPriority__c.Label}" for="priority"/>
+     <apex:actionRegion >
+     <apex:inputField value="{!ac.CustomerPriority__c}" id="priority">
+     <apex:actionSupport event="onchange" action="{!prioritychanged}" reRender="pb"/>
+      </apex:inputField>
+     </apex:actionRegion>
+     
+    </apex:pageBlockSectionItem>
+    <apex:inputField value="{!ac.phone}" rendered="{!showphone}"/>
+     
+   </apex:pageBlockSection>
+   <apex:pageBlockSection title="Other Account details" collapsible="false" >
+    <apex:inputField value="{!ac.SLA__c}" required="true"/>
+     <apex:inputField value="{!ac.Rating}"/>
+    <apex:inputField value="{!ac.name}"/>
+   
+   </apex:pageBlockSection>
+  </apex:pageBlock>
+ </apex:form>
+</apex:page>

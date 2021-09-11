@@ -1,0 +1,15 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+	<div>
+        HnH granville<br/>
+        training institute<br/>
+        diploma in childcare<br/>
+        with subsidies<br/>
+        Unit 10
+        29-33 Joyce street<br/>
+        Pendle hill<br/>
+        Nsw,2145<br/>
+    </div>
+    <br/>
+    <br/>
+    <c:parentcomp/>
+</aura:component>

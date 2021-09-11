@@ -1,0 +1,25 @@
+<apex:page standardController="account" recordSetVar="actlist">
+<script>
+function handleChange(sourceId, destinationId) {
+    console.log('sourceId=' + sourceId);
+    console.log('destinationId=' + destinationId);
+    var v = document.getElementById(sourceId).value;
+    document.getElementById(destinationId).innerHTML = v;
+}
+</script>
+<apex:form >
+<apex:pageBlock >
+<apex:pageBlockTable value="{!actlist}" var="a">
+<apex:column >
+<apex:inputField value="{!a.AccountSource}"
+                  id="source"
+                   onchange="handlechange('{!$Component.source}','{!$Component.destination}')"/>
+                   
+</apex:column>
+<apex:column >
+   <apex:outputText id="destination" value="{!a.name}"/>
+</apex:column>
+</apex:pageBlockTable>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

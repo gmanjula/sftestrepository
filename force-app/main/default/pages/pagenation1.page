@@ -1,0 +1,22 @@
+<apex:page standardController="project__c" recordSetVar="prjlst" extensions="Extntable">
+<apex:form >
+  <apex:pageblock id="pd" >
+  
+   <apex:pageBlockTable title=" Project List" value="{!prjlst}" var="p">
+    <apex:column value="{!p.name}"/>
+    <apex:column value="{!p.Active_Status__c}"/>
+    <apex:column value="{!p.client__c}"/>
+    <apex:column value="{!p.Paid_Budget__c}"/>
+   </apex:pageBlockTable>
+   <apex:pageBlockButtons location="bottom">
+    <apex:commandButton image="{!$Resource.Nextimage}"  style="height:25px;width:25px;"  action="{!next}" reRender="pd" status="ds"/>
+    <apex:commandButton disabled="{isdisabled}" image="{!$Resource.previousimage}" style="height:25px;width:25px;"  action="{!previous}" reRender="pd" status="ds"/>
+   </apex:pageBlockButtons>
+  </apex:pageblock>
+  <apex:actionStatus id="ds">
+   <apex:facet name="start">
+        <apex:image value="{!$Resource.loading}" height="50" width="50" />
+   </apex:facet>
+  </apex:actionStatus>
+</apex:form>
+</apex:page>

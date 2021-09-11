@@ -1,0 +1,15 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+	
+    <aura:attribute name="studentname" type= "string" required="true" default="harshi" description="student details like name"/>
+    <aura:attribute name="Age" type= "integer" required="true" default="20" description="student details like age"/>
+    <aura:attribute name="course" type= "string" required="true" default="child care" description="interested course name"/>
+    <aura:attribute name="salary" type= "decimal"  description="student details like expected salary"/>
+    <aura:attribute name="location" type= "string" description="training place details"/>
+    
+    Name :{!v.studentname}<br/>
+    Age :{!v.Age}<br/>
+    course :{!v.course}<br/>
+    Expected salary :{!v.salary}<br/>
+    Location :{!v.location}<br/>
+
+</aura:component>

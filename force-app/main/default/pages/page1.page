@@ -1,0 +1,12 @@
+<apex:page title="Login page" sidebar="false" showHeader="true" rendered="true" >
+  <!-- Begin Default Content REMOVE THIS -->
+  <apex:form >
+  <center>
+  <apex:outputText > username </apex:outputText>
+  <apex:inputtext /> <br/><br/>&nbsp; 
+  <apex:outputText > passowrd </apex:outputText>
+  <apex:inputsecret /><br/><br/>
+  <apex:commandButton value="Login"/>
+  </center>
+  </apex:form>
+</apex:page>

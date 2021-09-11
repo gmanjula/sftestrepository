@@ -1,0 +1,35 @@
+<apex:page standardController="project__c" recordSetVar="prjlst" >
+  <apex:pageBlock title="page block table">
+    <apex:pageBlockTable value="{!prjlst}" var="p">
+      <apex:column value="{!p.name}"/>
+      <apex:column value="{!p.Status__c}"/>
+      <apex:column value="{!p.Active_Status__c}"/>
+      <apex:column value="{!p.client__c}"/>
+   </apex:pageBlockTable>
+  </apex:pageBlock>
+  <apex:pageBlock title="data table">
+  <apex:dataTable value="{!prjlst}" var="p">
+    <apex:column value="{!p.name}"/>
+      <apex:column value="{!p.Status__c}"/>
+      <apex:column value="{!p.Active_Status__c}"/>
+      <apex:column value="{!p.client__c}"/>
+  </apex:dataTable>
+    </apex:pageBlock>
+  <apex:pageBlock title="data list">
+    <apex:dataList value="{!prjlst}" var="p">
+    <apex:outputText >{!p.name}</apex:outputText>
+    <apex:outputText >{!p.Status__c}</apex:outputText>
+    <apex:outputText >{!p.Active_Status__c}</apex:outputText>
+    <apex:outputText >{!p.client__c}</apex:outputText>
+    </apex:dataList>
+  </apex:pageBlock>
+  <apex:pageBlock title="repeat">
+   <apex:repeat value="{!prjlst}" var="p" >
+    <apex:outputText >{!p.name}</apex:outputText>
+    <apex:outputText >{!p.Status__c}</apex:outputText>
+    <apex:outputText >{!p.Active_Status__c}</apex:outputText>
+    <apex:outputText >{!p.client__c}</apex:outputText>
+   </apex:repeat>
+   <apex:enhancedList type="project__c" height="600"/>
+  </apex:pageBlock>
+</apex:page>

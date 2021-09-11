@@ -1,0 +1,51 @@
+<aura:component >
+    
+    <aura:attribute name="studentname" type= "string" required="true" default="harshi" description="student details like name"/>
+    <aura:attribute name="Age" type= "integer" required="true" default="20" description="student details like age"/>
+    <aura:attribute name="course" type= "string" required="true" default="child care" description="interested course name"/>
+    <aura:attribute name="salary" type= "decimal"  description="student details like expected salary"/>
+    <aura:attribute name="Exp" type="integer" />
+    <aura:attribute name="Bonus" type="decimal" />
+    <aura:attribute name="location" type= "string" description="training place details"/>
+    
+    Name :{!v.studentname}<br/>
+    Age :{!v.Age}<br/>
+    course :{!v.course}<br/>
+    Expected salary :{!v.salary}<br/>
+    Experience :{!v.Exp}<br/>
+    Bonus :{!v.Bonus}<br/>
+    Location :{!v.location}<br/>
+    <lightning:button variant="success" label="Get Bonus" title="Bonus" onclick="{! c.display }"/>
+	<br/><br/><br/>
+    <lightning:buttongroup>
+        <lightning:button  label="Get Bonus" title="Bonus"/>
+        <lightning:button variant="base" label="Get Bonus" title="Bonus"/>
+        <lightning:button variant="neutral" label="Get Bonus" title="Bonus"/>
+            <lightning:button variant="brand" label="Get Bonus" title="Bonus"/>
+        <lightning:button variant="brand-outline" label="Get Bonus" title="Bonus"/>
+        <lightning:button variant="inverse" label="Get Bonus" title="Bonus"/>
+        <lightning:button variant="destructive" label="Get Bonus" title="Bonus"/>
+        <lightning:button variant="destructive-text" label="Get Bonus" title="Bonus"/>
+        <lightning:button label="cancel" title="Bonus" iconName="standard:account"/>
+        <lightning:button label="set" title="set options" iconName="utility:down" iconposition="right" />
+        <lightning:button variant="success" label="Get Bonus" title="Bonus"/>
+    </lightning:buttongroup>
+    <br/><br/><br/>
+    <br/><br/><br/>
+    <br/><br/><br/>
+    <lightning:input label="Last Name" type="string" aura:id="lname" placeholder="Lastname"/>
+    <lightning:input label="First Name" type="string" aura:id="fname"/>
+    <lightning:input label="Active" type="checkbox"/>
+    <lightning:input label="DOB" type="date"/>
+    
+    <lightning:input label="Search student" type="search"/>
+    <lightning:input label="Search Student" type="search-hidden"/>
+    <lightning:select name="Gender" label="Gender">	
+       <option value="">choose one....</option>
+       <option value="Male">Male</option>
+       <option value="Female">Female</option>
+    </lightning:select>
+    <lightning:input label="Name" aura:id="name"/>
+    <lightning:button variant="Brand"  label="Get Name" title="name" onclick="{! c.showname }"/>
+    
+</aura:component>

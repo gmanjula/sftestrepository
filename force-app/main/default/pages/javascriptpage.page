@@ -1,0 +1,6 @@
+<apex:page >
+
+<apex:includeScript value="{!$Resource.javascript}"/>
+  <apex:outputLabel onclick="samp1()" onmouseup="move()">hiiiiiiiiiiiiiiiiiiiiiiiiii</apex:outputLabel>
+  
+</apex:page>

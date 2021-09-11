@@ -1,0 +1,40 @@
+<apex:page controller="Projectrecsave">
+  <apex:form >
+   <apex:sectionHeader title="New project"/>
+   <apex:pageBlock title="project Edit" mode="Edit" >
+    <apex:pageblockSection title=" Information">
+     <apex:pageBlockSectionItem >
+      <apex:outputLabel > Project Name</apex:outputLabel>
+        <apex:inputtext value="{!prjname}"/>
+     </apex:pageBlockSectionItem>
+     <apex:pageBlockSectionItem >
+     <apex:outputLabel > project contact Email id</apex:outputLabel>
+        <apex:inputText value="{!prjemailid}"/>
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >
+     <apex:outputLabel > Active_Status</apex:outputLabel>
+        <apex:inputCheckbox value="{!prjactivestatus}"/> 
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >
+     <apex:outputLabel > work_loaction</apex:outputLabel>
+        <apex:inputtext value="{!prjlocationcoutry}"/>
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >
+     <apex:outputLabel > State</apex:outputLabel>
+        <apex:inputtext value="{!prjstate}"/>
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >
+     <apex:outputLabel > project_phone</apex:outputLabel>
+        <apex:inputtext value="{!prjphone}"/>
+        </apex:pageBlockSectionItem>
+        
+    </apex:pageblockSection>
+    <apex:pageBlockButtons location="top" >
+     <apex:commandButton value="save" action="{!save}" />
+          <apex:commandButton value="Save & New" action="{!saveandnew}"/>
+          <apex:commandButton value="cancel" action="{!cancel}"/>
+     
+       </apex:pageBlockButtons>
+   </apex:pageBlock>
+  </apex:form>
+</apex:page>
